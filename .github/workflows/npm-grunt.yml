@@ -22,6 +22,8 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
+            - name: 格式檢查
+              run: npm run lint
 
             - name: 打包
               run: |

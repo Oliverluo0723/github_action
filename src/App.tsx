@@ -4,12 +4,16 @@ import { useState } from "react";
 function App() {
     const [count, setCount] = useState(0);
 
+    const handleClick = (value: number) => {
+        setCount((prev) => prev + value);
+    };
+
     return (
         <>
             <h1>{count}</h1>
             <button
                 onClick={() => {
-                    setCount(count + 1);
+                    handleClick(10);
                 }}
             >
                 Click me
