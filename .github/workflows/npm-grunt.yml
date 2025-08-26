@@ -15,7 +15,8 @@ jobs:
                 node-version: [22.14.0]
 
         steps:
-            - uses: actions/checkout@v4
+            - name: 拿到程式碼
+              uses: actions/checkout@v4
 
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
@@ -25,4 +26,4 @@ jobs:
             - name: Build
               run: |
                   npm install
-                  grunt
+                  npm build
