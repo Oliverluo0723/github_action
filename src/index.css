@@ -117,4 +117,13 @@
     body {
         @apply bg-background text-foreground;
     }
+    header {
+        @apply w-full h-24 p-4;
+    }
+}
+
+@layer base {
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
 }
