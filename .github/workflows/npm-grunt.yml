@@ -18,12 +18,12 @@ jobs:
             - name: 拿到程式碼
               uses: actions/checkout@v4
 
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: 下載 Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
 
-            - name: Build
+            - name: 打包
               run: |
-                  npm install
+                  npm ci
                   npm run build
