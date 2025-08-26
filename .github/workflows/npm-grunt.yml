@@ -22,10 +22,12 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
+
+            - name: 安裝相關套件
+              run: npm ci
+
             - name: 格式檢查
               run: npm run lint
 
             - name: 打包
-              run: |
-                  npm ci
-                  npm run build
+              run: npm run build
